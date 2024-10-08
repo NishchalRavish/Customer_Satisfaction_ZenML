@@ -22,7 +22,7 @@ class IngestData:
 
 # Zenml data ingestion step    
 @step
-def ingest_data(data_path:str) -> pd.DataFrame:
+def ingest_df(data_path:str) -> pd.DataFrame:
     """
     Ingest the data from the data path
     
