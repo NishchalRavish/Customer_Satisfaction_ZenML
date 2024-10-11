@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 from sklearn.model_selection import train_test_split
-from abc import ABC
+from abc import ABC, abstractmethod
 from typing import Union
 
 
