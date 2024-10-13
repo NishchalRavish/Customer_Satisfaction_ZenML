@@ -10,7 +10,7 @@ from typing_extensions import Annotated
 from zenml import step
 from zenml.client import Client
 
-experiment_tracker = Client().activate_stack.experiment_tracker
+experiment_tracker = Client().active_stack.experiment_tracker
 
 @step(experiment_tracker=experiment_tracker.name)
 def evaluation(model:RegressorMixin, x_test:pd.DataFrame, y_test:pd.Series) -> Tuple[
