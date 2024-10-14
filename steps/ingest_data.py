@@ -22,17 +22,17 @@ class IngestData:
 
 # Zenml data ingestion step    
 @step
-def ingest_df(data_path:str) -> pd.DataFrame:
+def ingest_data() -> pd.DataFrame:
     """
     Ingest the data from the data path
     
     Args:
-        data_path: path to data
+        None
     Returns:
-        pd.DataFrame: Dataframe of the data
+        df: pd.DataFrame
     """
     try:
-        ingest_data = IngestData(data_path)
+        ingest_data = IngestData()
         df = ingest_data.get_data()
         return df
     except Exception as e:
