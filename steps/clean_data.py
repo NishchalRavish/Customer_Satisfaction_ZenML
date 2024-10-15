@@ -11,7 +11,7 @@ from src.data_cleaning import(
     DataStrategy
 )
 
-@step(enable_cache=False) # set to true when needed
+@step
 def clean_data(data:pd.DataFrame) -> Tuple[
     Annotated[pd.DataFrame, "x_train"],
     Annotated[pd.DataFrame, "x_test"],

@@ -6,21 +6,16 @@ class IngestData:
     """
     Ingest the data from the data path
     """
-    def __init__(self,data_path:str):
+    def __init__(self) -> None:
         """
-        Args: 
-            data_path: path to the data
+        Initialize the data ingestion class
         """
-        self.data_path = data_path
+        pass
         
-    def get_data(self):
-        """
-        Ingesting the data from the data path and returns a Dataframe
-        """
-        logging.info(f"Ingesting data from {self.data_path}")
-        return pd.read_csv(self.data_path)
+    def get_data(self) ->pd.DataFrame:
+        df = pd.read_csv('./data/olist_cusomers_dataset.csv')
+        
 
-# Zenml data ingestion step    
 @step
 def ingest_data() -> pd.DataFrame:
     """
