@@ -27,7 +27,7 @@ class MSE(Evaluation):
         try:
             logging.info("Entered the calculate_score mehtod for MSE")
             mse = mean_squared_error(y_true,y_pred)
-            logging.info("The MSE value is + str(mse)")
+            logging.info("The MSE value is" + str(mse))
             return mse
         except Exception as e:
             logging.error(e)
