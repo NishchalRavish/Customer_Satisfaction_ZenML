@@ -12,8 +12,9 @@ class IngestData:
         """
         pass
         
-    def get_data(self) ->pd.DataFrame:
-        df = pd.read_csv('./data/olist_cusomers_dataset.csv')
+    def get_data(self) -> pd.DataFrame:
+        df = pd.read_csv('data/olist_customers_dataset.csv')
+        return df
         
 
 @step
