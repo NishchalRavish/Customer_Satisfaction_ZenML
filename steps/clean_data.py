@@ -12,7 +12,7 @@ from src.data_cleaning import(
 )
 
 @step
-def clean_data(data:pd.DataFrame) -> Tuple[
+def clean_data(data:pd.DataFrame,) -> Tuple[
     Annotated[pd.DataFrame, "x_train"],
     Annotated[pd.DataFrame, "x_test"],
     Annotated[pd.DataFrame, "y_train"],

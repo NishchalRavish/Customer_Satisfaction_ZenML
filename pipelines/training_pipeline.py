@@ -5,7 +5,7 @@ from steps.evaluation import evaluation
 from steps.model_train import train_model
 
 @pipeline(enable_cache=False)
-def train_pipeline(ingest_data,clean_data,evaluation,train_model):
+def train_pipeline(ingest_data,clean_data,train_model,evaluation):
     """
     Args:
         ingest_data: DataClass
